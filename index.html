@@ -1,143 +1,191 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    
+    <script src="script.js" async></script>
     <title>Specz Optical</title>
-</head>
-<body>
-    <header id="top-header">
-        
-            <div class="logo"><img src="img/Specz-Optical-Mobile-Logo-2.png">
-            <nav><a id="nav_btn"><span>Toggle Menu</span></a></nav>
-            <nav class-"toggle" id="main-nav">
-             
-                
-                <ul>
-                    <li><a href="#showcase">Home</a></li>
-                    <li><a href="#section-a">About</a></li>
-                    <li><a href="#section-d">News</a></li>
-                    <li><a href="#section-d">Contact</a></li>
-                </ul>
-            </nav>
-            </div>
-        
+  </head>
+  <body>
+    <header id="top-header" class="active">
+      <div class="logo">
+        <img src="img/Specz-Optical-Mobile-Logo-2.png" />
+        <nav>
+          <div class="menu-toggle" id="nav_btn">
+            <div class="hamburger"></div>
+          </div>
+        </nav>
+        <nav class="site-nav" id="main-nav"> <!-- Big nav menu: was class=toggle -->
+          <ul>
+            <li class="nav__link"><a href="#top-header">Home</a></li>
+            <li class="nav__link"><a href="#section-a">About</a></li>
+            <li class="nav__link"><a href="#section-d">News</a></li>
+            <li class="nav__link"><a href="#section-d">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
     </header>
     <!-- Showcase -->
-    <header id="showcase" class="card"> <!-- was class=grid -->
-        <div class="bg-image">
-            <div class="overlay"></div>
+    <header id="showcase" class="card">
+      <!-- was class=grid -->
+      <div class="bg-image">
+        <div class="overlay"></div>
+      </div>
+
+      <div class="content-wrap">
+        <div class="showcase-text">
+          <h3>Welcome to Specz Optical</h3>
+          <div class="content-text"></div>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui dolores
+            harum repudiandae tempore et quam officia incidunt, voluptate esse
+            at.
+          </p>
+          <a href="#section-d" class="btn">Book Appointment</a>
         </div>
-        
-        <div class="content-wrap">
-            <div class="showcase-text">
-                <h3>Welcome to Specz Optical</h3>
-                <div class="content-text"></div>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui dolores harum repudiandae tempore et quam officia incidunt, voluptate esse at.
-                </p>
-                <a href="#section-d" class="btn">Book Appointment</a>
-        </div>
-        </div>
+      </div>
     </header>
     <!-- Main Area -->
     <main id="main">
+      <!-- Section A -->
+      <section id="section-a" class="card">
+        <div class="content-wrap">
+          <h2 class="content-title">About</h2>
+          <div class="content-text">
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi
+              minima delectus saepe officia vel nihil, optio accusantium
+              reiciendis quae consequatur vero molestiae numquam perferendis.
+              Culpa accusamus facere, porro dolore perferendis optio dignissimos
+              repellat fuga exercitationem animi, eius neque temporibus maxime?
+            </p>
+            <p>&nbsp;</p>
+          </div>
+        </div>
+        <div class="video-wrapper">
+          <iframe
+            width="560"
+            height="315"
+            src="https://www.youtube.com/embed/0xcQn6riu0o"
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+          ></iframe>
+        </div>
+      </section>
 
-        <!-- Section A -->
-        <section id="section-a" class="card">
-            <div class="content-wrap">
-                <h2 class="content-title">About</h2>
-                    <div class="content-text">
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi minima delectus saepe officia vel nihil, optio accusantium reiciendis quae consequatur vero molestiae numquam perferendis. Culpa accusamus facere, porro dolore perferendis optio dignissimos repellat fuga exercitationem animi, eius neque temporibus maxime?</p>
-                        <p>&nbsp;</p>
-                    </div>
-                    
+      <!-- Section B -->
+      <section id="section-b" class="card">
+        <h2 class="content-title">Services</h2>
+        <ul>
+          <li>
+            <div class="card">
+              <img
+                src="https://images.pexels.com/photos/5201997/pexels-photo-5201997.jpeg?cs=srgb&dl=pexels-karolina-grabowska-5201997.jpg&fm=jpg"
+              />
+              <div class="card-content">
+                <h3 class="card-title">Optical</h3>
+                <p>
+                  The best collection of glasses sit amet, consectetur
+                  adipisicing elit.
+                </p>
+              </div>
             </div>
-            <div class="video-wrapper">
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/0xcQn6riu0o" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          </li>
+          <li>
+            <div class="card">
+              <img
+                src="https://images.pexels.com/photos/5752287/pexels-photo-5752287.jpeg?cs=srgb&dl=pexels-ksenia-chernaya-5752287.jpg&fm=jpg"
+              />
+              <div class="card-content">
+                <h3 class="card-title">Vision</h3>
+                <p>
+                  Precise refraction, dolor sit amet consectetur adipisicing
+                  elit.
+                </p>
+              </div>
             </div>
-        </section>
+          </li>
+        </ul>
+        <a href="#section-d" class="btn">Book Appointment</a>
+      </section>
 
-        <!-- Section B -->
-        <section id="section-b" class="card">
-            <h2 class="content-title">Services</h2>
-            <ul>
-                <li>
-                    <div class="card">
-                        <img src="https://images.pexels.com/photos/5201997/pexels-photo-5201997.jpeg?cs=srgb&dl=pexels-karolina-grabowska-5201997.jpg&fm=jpg">
-                            <div class="card-content">
-                                <h3 class="card-title">Optical</h3>
-                                <p>The best collection of glasses sit amet, consectetur adipisicing elit.</p>
-                            </div>
-                    </div>
-                </li>
-                <li>
-                    <div class="card">
-                        <img src="https://images.pexels.com/photos/5752287/pexels-photo-5752287.jpeg?cs=srgb&dl=pexels-ksenia-chernaya-5752287.jpg&fm=jpg">
-                            <div class="card-content">
-                                <h3 class="card-title">Vision</h3>
-                                <p>Precise refraction, dolor sit amet consectetur adipisicing elit.</p>
-                            </div>
-                    </div>
-                </li>
-            </ul>
-            <a href="#section-d" class="btn">Book Appointment</a>
-        </section>
+      <!-- Section C -->
+      <section id="section-c" class="grid">
+        <div class="content-wrap">
+          <h2 class="content-title">Locations</h2>
+          <ul>
+            <li>
+              <div class="card">
+                <img src="https://source.unsplash.com/BF8WEck6RL0" />
+                <div class="card-content">
+                  <h3 class="card-title">Phoenix</h3>
+                  <p>1234 Vision Way, Phoenix, AZ 85010</p>
+                  <a href="#" class="btn">Get Directions</a>
+                  <a href="#section-d" class="btn">Book Appointment</a>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="card">
+                <img src="https://source.unsplash.com/NX0WjgdQl58" />
+                <div class="card-content">
+                  <h3 class="card-title">Florence</h3>
+                  <p>1111 Anystreet, Florence, AZ 85132</p>
+                  <a href="#" class="btn">Get Directions</a>
+                  <a href="#section-d" class="btn">Book Appointment</a>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </section>
 
-        <!-- Section C -->
-        <section id="section-c" class="grid">
-            <div class="content-wrap">
-                <h2 class="content-title">Locations</h2>
-                <ul>
-                    <li>
-                        <div class="card">
-                            <img src="https://source.unsplash.com/BF8WEck6RL0">
-                                <div class="card-content">
-                                    <h3 class="card-title">Phoenix</h3>
-                                    <p>1234 Vision Way, Phoenix, AZ 85010</p>
-                                    <a href="#" class="btn">Get Directions</a>
-                                    <a href="#section-d" class="btn">Book Appointment</a>
-                                </div>
-                            
-                        </div>
-                    </li>
-                    <li>
-                        <div class="card">
-                            <img src="https://source.unsplash.com/NX0WjgdQl58">
-                                <div class="card-content">
-                                    <h3 class="card-title">Florence</h3>
-                                    <p>1111 Anystreet, Florence, AZ 85132</p>
-                                    <a href="#" class="btn">Get Directions</a>
-                                    <a href="#section-d" class="btn">Book Appointment</a>
-                                </div>
-                            
-                        </div>
-                    </li>
-                </ul>
-            </div>
-        </section>
-
-        <!-- Section D -->
-        <section id="section-d" class="grid">
-            <div class="box">
-                <h2 class="content-title">Contact Us</h2>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem quibusdam magnam eligendi dolore totam nemo suscipit quo officiis, mollitia vitae.</p>
-                <div>contact@specsoptics.test</div>
-                <div>Call 1-800-SEE-SPECZ</div>
-            </div>
-            <div class="box">
-                <h2 class="content-title">About Specz</h2>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium a asperiores autem, incidunt voluptatum voluptatem est necessitatibus voluptas tempora. Consectetur autem voluptate eaque quisquam temporibus? Sapiente, facilis, architecto tenetur aliquid in nulla nihil odit est minima illum cupiditate. Vel, cum.</p>
-            </div>
-        </section>
-
+      <!-- Section D -->
+      <section id="section-d" class="grid">
+        <div class="box">
+          <h2 class="content-title">Contact Us</h2>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem
+            quibusdam magnam eligendi dolore totam nemo suscipit quo officiis,
+            mollitia vitae.
+          </p>
+          <div>contact@specsoptics.test</div>
+          <div>Call 1-800-SEE-SPECZ</div>
+        </div>
+        <div class="box">
+          <h2 class="content-title">About Specz</h2>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium
+            a asperiores autem, incidunt voluptatum voluptatem est
+            necessitatibus voluptas tempora. Consectetur autem voluptate eaque
+            quisquam temporibus? Sapiente, facilis, architecto tenetur aliquid
+            in nulla nihil odit est minima illum cupiditate. Vel, cum.
+          </p>
+        </div>
+      </section>
     </main>
     <!-- Footer -->
     <footer id="main-footer" class="grid">
-        <div>Copyright &copy; <script>document.write(new Date().getFullYear())</script> Specz Optical Services, LLC
-        </div>
-        <div>Created by Christy Volosin</div>
+      <div>
+        Copyright &copy;
+        <script>
+          document.write(new Date().getFullYear());
+        </script>
+        Specz Optical Services, LLC
+      </div>
+      <div>Created by Christy Volosin</div>
     </footer>
-</body>
+  </body>
 </html>
