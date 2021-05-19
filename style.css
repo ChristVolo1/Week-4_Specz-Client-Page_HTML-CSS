@@ -21,16 +21,18 @@ p {
   margin: 0;
   padding: 1em 0;
 }
+/* card buttons: */
+
 .btn {
   display: inline-block;
   background: cornsilk;
   text-decoration: none;
-  /* text-transform: uppercase; */
   padding: 1em 2em;
   border: 1px solid goldenrod;
   margin: 0.5em 0;
 }
 
+/* card button hover effect: */
 .btn:hover {
   background: #eaeaea;
   color: indigo;
@@ -56,38 +58,115 @@ p {
   padding: 10px; /* sides were 1em */
   z-index: 1000;
 }
-/* when small */
+/* When Small */
 
-#nav_btn {
+.site-nav {
+  position: fixed; /* was absolute */
+  top: 0;
+  right: 0%;
+  background: #333;
+  /* visibility: hidden; */
+  overflow: hidden;
+  clip-path: circle(0px at top);
+  transition: clip-path ease-in-out 300ms; /* was  */
+}
+
+/* main nav menu items */
+
+.site-nav ul {
+  display: flex;
+  flex-flow: column;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.site-nav li {
+  border-bottom: 1px solid #575766;
+}
+
+.site-nav li:last-child {
+  border-bottom: none;
+}
+
+/* main nav menu items text */
+
+.site-nav a {
   display: block;
-  float: right;
-  padding: 20px;
-  cursor: pointer;
+  color: #ceb793;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: bold;
+  padding: 2em 4em;
 }
-#nav_btn span,
-#nav_btn span::before,
-#nav_btn span::after {
-  width: 28px;
-  height: 4px;
-  float: left;
-  display: block;
-  background: #000;
-  position: relative;
-  text-indent: -9000px;
+
+/* main nav menu items hover effect: */
+.site-nav a:hover,
+.site-nav a:focus {
+  color: blue;
+  background: #ceb793;
 }
-#nav_btn span {
-  margin: 8px 0;
-}
-#nav_btn span::before,
-#nav_btn span::after {
-  content: "";
+
+/* building hamburger nav button with CSS */
+
+.menu-toggle {
+  padding: 1em;
   position: absolute;
+  right: 1em;
+  top: 0.5em;
+  right: 0.5em;
+  cursor: pointer;
+  z-index: 2;
 }
-#nav_btn span::before {
-  top: -8px;
+
+.hamburger,
+.hamburger::before,
+.hamburger::after {
+  content: "";
+  display: block;
+  background: #ebebd3;
+  height: 3px;
+  width: 1.75em;
+  border-radius: 3px;
+  transition: transform 500ms ease-in-out;
 }
-#nav_btn span::after {
-  bottom: -8px;
+
+.hamburger::before {
+  transform: translateY(-6px);
+}
+
+.hamburger::after {
+  transform: translateY(3px);
+}
+
+/* For when nav-open class has been applied: */
+
+.nav-open .site-nav {
+  position: fixed;
+  height: auto;
+  /* visibility: visible; */
+  top: 0;
+  right: 0;
+  clip-path: circle(150% at top);
+  transition: clip-path ease-in-out 700ms;
+}
+
+.nav-open .menu-toggle {
+  position: fixed;
+}
+
+/* nav-open rotate feature */
+
+.nav-open .hamburger {
+  transform: rotate(45deg);
+}
+
+.nav-open .hamburger::before {
+  opacity: 0;
+}
+
+.nav-open .hamburger::after {
+  transform: translateY(-3px) rotate(-90deg);
 }
 
 /* Header Showcase */
@@ -102,7 +181,7 @@ p {
 }
 
 #showcase .bg-image {
-  position: absolute; /* was absolute */
+  position: absolute;
   background: #eaeaea url("https://source.unsplash.com/oQdpelfogoo");
   background-position: center;
   background-repeat: no-repeat;
@@ -111,7 +190,6 @@ p {
   width: 100%;
   height: 500px;
   z-index: 1;
-  /* opacity: 1; */
 }
 
 #showcase .overlay {
@@ -152,6 +230,17 @@ p {
 #section-a .video-wrapper {
   padding-top: 2em;
   justify-content: center;
+  width: 80%;
+  height: 0;
+  padding-bottom: 56.25%;
+  position: relative;
+}
+
+.video-wrapper iframe {
+  position: absolute;
+  width: 80%;
+  height: 80%;
+  left: 23%;
 }
 
 /* Section-B */
@@ -220,11 +309,11 @@ p {
 
 /* Media Queries */
 
-@media screen and (max-width: 700px) {
+/* @media screen and (max-width: 700px) {
   #main-nav {
     display: none;
   }
-}
+} */
 
 @media (min-width: 700px) {
   .grid {
@@ -232,44 +321,54 @@ p {
     grid-template-columns: 1fr repeat(2, minmax(auto, 25em)) 1fr;
   }
 
-  #nav_btn {
+  .menu-toggle {
     display: none;
   }
 
-  .toggle {
-    display: block;
+  /* When Big */
+
+  .site-nav {
+    display: flex;
+    height: auto;
+    position: relative;
+    background: transparent;
+    align-items: right;
+    clip-path: initial;
   }
 
-  #main-nav ul {
+  /* main nav menu items */
+  .site-nav ul {
     display: flex;
     flex-flow: row nowrap;
   }
 
-  nav {
-    display: flex; /* When Big */
-  }
-
-  nav ul {
+  .site-nav ul {
     margin: 0;
     padding-right: 1em;
-    list-style: none;
+    border: none;
   }
 
-  nav li {
+  .site-nav li {
     display: inline-block;
-    margin-left: 40px;
-    padding-top: 20px;
+    margin-left: 3em; /* was 40px */
+    padding-top: 1.3em;
+    border: none;
   }
 
-  nav a {
+  /* main nav menu items text */
+  .site-nav a {
+    padding: 0;
     color: #ceb793;
     text-decoration: none;
-    text-transform: uppercase;
-    font-size: 15px;
+    font-size: 18px;
+    font-weight: bold;
   }
 
-  nav a:hover {
+  /* main nav menu items hover effect: */
+  .site-nav a:hover,
+  .site-nav a:focus {
     color: blue;
+    background: transparent;
   }
 
   #section-a .content-text {
